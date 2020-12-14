@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Intro Page</title>
+
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+        <div class="topnav" id="mainTopnav">
+            <a href="index.html">Home</a>
+            <a href="info.html">Information</a>
+            <a href="incentives.html">Incentives</a>
+        </div>
+
+        <h1>Heading</h1>
+        <p>Paragraph</p>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("mainTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav"
+                }
+            }
+        </script>
+    </body>
+</html>
