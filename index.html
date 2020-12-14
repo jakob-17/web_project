@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta name="viewport" 
+            content="width=device-width, initial-scale=1.0" 
+            charset="UTF-8">
         <title>Intro Page</title>
 
         <link rel="stylesheet" href="main.css">
     </head>
 
     <body>
-        <div class="topnav" id="mainTopnav">
+        <!-- <div class="topnav" id="mainTopnav">
             <a href="index.html">Home</a>
+            <a href="info.html">Information</a>
+            <a href="incentives.html">Incentives</a>
+        </div> -->
+        <div class="sidebar">
+            <a class="active" href="index.html">Home</a>
             <a href="info.html">Information</a>
             <a href="incentives.html">Incentives</a>
         </div>
 
-        <h1>Heading</h1>
-        <p>Paragraph</p>
+        <div class="content">
+            Hello World!
+        </div>
 
-        <script>
+        <!-- <script>
             function myFunction() {
                 var x = document.getElementById("mainTopnav");
                 if (x.className === "topnav") {
@@ -26,6 +34,6 @@
                     x.className = "topnav"
                 }
             }
-        </script>
+        </script> -->
     </body>
 </html>
