@@ -8,15 +8,38 @@
     </head>
 
     <body>
-        <div class="sidebar">
+        <div class="sidebar" id="collapsedSidebar">
+            <a href="javascript:void(0)" class="closebtn"
+                onclick="closeNav()">x</a>
             <a class="active" href="index.html">Home</a>
             <a href="info.html">Information</a>
             <a href="incentives.html">Incentives</a>
         </div>
 
-        <div class="content">
-            I got some incentives for ya
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">
+                ☰
+            </button>
+
+            <div class="content">
+                I got some incentives for ya...
+            </div>
         </div>
 
+        <script>
+            function openNav() {
+                document.getElementById("collapsedSidebar")
+                    .style.width = "250px";
+                document.getElementById("main").style
+                    .marginLeft = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("collapsedSidebar")
+                    .style.width = "0";
+                document.getElementById("main").style
+                    .marginLeft = "0";
+            }
+        </script>
     </body>
 </html>
