@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Incentives</title>
 
-        <link rel="stylesheet" href="main.css">
-    </head>
+<head>
+    <meta name="viewport" 
+            content="width=device-width, initial-scale=1.0" 
+            charset="UTF-8">
+    <title>Incentives</title>
 
-    <body>
-        <div class="sidebar" id="collapsedSidebar">
-            <a href="javascript:void(0)" class="closebtn"
-                onclick="closeNav()">x</a>
-            <a class="active" href="index.html">Home</a>
-            <a href="info.html">Information</a>
-            <a href="incentives.html">Incentives</a>
-        </div>
+    <link rel="stylesheet" href="main.css">
+</head>
 
-        <div id="main">
-            <button class="openbtn" onclick="openNav()">
+<body>
+    <div class="sidebar" id="collapsedSidebar">
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a> -->
+        <a class="active" href="index.html">Home</a>
+        <a href="info.html">Information</a>
+        <a href="incentives.html">Incentives</a>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <div class=quickLinks>
+                <a class="active" href="index.html">Home</a>
+                <a href="info.html">Information</a>
+                <a href="incentives.html">Incentives</a>
+            </div>
+            <button class="openbtn" id="openBtn" onclick="clickNav()">
                 ☰
             </button>
-
-            <div class="content">
-                I got some incentives for ya...
-            </div>
         </div>
 
-        <script>
-            function openNav() {
-                document.getElementById("collapsedSidebar")
-                    .style.width = "250px";
-                document.getElementById("main").style
-                    .marginLeft = "250px";
-            }
+        <div class="content">
+            I got some incentives for ya...
+        </div>
+    </div>
 
-            function closeNav() {
-                document.getElementById("collapsedSidebar")
-                    .style.width = "0";
-                document.getElementById("main").style
-                    .marginLeft = "0";
+    <script>
+        function clickNav() {
+            let sidebar = document.getElementById("collapsedSidebar");
+            let btn = document.getElementById("openBtn")
+            if (sidebar.style.width == "150px") {
+                sidebar.style.width = "0px";
+                btn.style.marginRight = "0px";
             }
-        </script>
-    </body>
+            else {
+                sidebar.style.width = "150px";
+                btn.style.marginRight = "150px";
+            }
+        }
+    </script>
+</body>
+
 </html>
