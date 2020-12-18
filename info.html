@@ -24,7 +24,7 @@
                     <a href="info.html">Information</a>
                     <a href="incentives.html">Incentives</a>
                 </div>
-                <button class="openbtn" id="openBtn" onclick="clickNav()">
+                <button class="navbtn" id="navBtn" onclick="clickNav()">
                     ☰
                 </button>
             </div>
@@ -37,7 +37,7 @@
         <script>
             function clickNav() {
                 let sidebar = document.getElementById("collapsedSidebar");
-                let btn = document.getElementById("openBtn")
+                let btn = document.getElementById("navBtn")
                 if (sidebar.style.width == "150px") {
                     sidebar.style.width = "0px";
                     btn.style.marginRight = "0px";

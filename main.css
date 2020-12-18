@@ -1,19 +1,25 @@
 :root {
-    --main-bg-color: #111;
+    /* header/navigation */
+    --main-menu-color: #111;
 
+    /* text */
     --main-text-color: #818181;
-
     --main-highlight-color: #f1f1f1;
+    --main-hover-color: #444;
+
+    /* text backgrounds */
+    --main-bg-color: #f1f1f1;
 }
 
 body {
     margin: 0;
     font-family: Georgia, serif;
+    background-color: var(--main-bg-color);
 }
 
 .header {
     overflow: hidden;
-    background-color: var(--main-bg-color);
+    background-color: var(--main-menu-color);
     padding: 10px 10px;
 }
 
@@ -39,7 +45,7 @@ body {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: var(--main-bg-color);
+    background-color: var(--main-menu-color);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 15px;
@@ -61,7 +67,7 @@ body {
 .navbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: var(--main-bg-color);
+    background-color: var(--main-menu-color);
     color: white;
     padding: 10px 15px;
     border: none;
@@ -69,7 +75,7 @@ body {
 }
 
 .navbtn:hover {
-    background-color: #444;
+    background-color: var(--main-hover-color);
 }
 
 /* #main {
