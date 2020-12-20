@@ -10,14 +10,15 @@
 </head>
 
 <body>
+    <!-- collapsed header -->
     <div class="sidebar" id="collapsedSidebar">
-        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a> -->
         <a class="active" href="index.html">Home</a>
         <a href="info.html">Information</a>
         <a href="incentives.html">Incentives</a>
     </div>
 
     <div id="main">
+        <!-- full-size header -->
         <div class="header">
             <div class=quickLinks>
                 <a class="active" href="index.html">Home</a>
@@ -29,10 +30,27 @@
             </button>
         </div>
 
+        <!-- introduction -->
         <div class="intro">
-            <h1>Hello World!</h1>
+            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+
+            <p>
+                Suspendisse quis mi nec ipsum condimentum sodales vel
+                ac metus. Sed sed ex condimentum, cursus elit ac,
+                iaculis lorem. Ut sodales sollicitudin est. Etiam vitae
+                venenatis leo. In luctus, erat nec malesuada vulputate,
+                dolor odio lobortis dolor, eu dapibus libero quam eu
+                mauris.
+            </p>
         </div>
 
+        <!-- Quisque vitae volutpat nisl, et fermentum justo. 
+        Donec ultrices nibh ac velit dictum porttitor. Integer a 
+        nulla dui. Morbi bibendum turpis enim, tincidunt pretium 
+        quam porttitor sit amet. Nunc ultrices luctus tellus, in 
+        accumsan tortor condimentum vitae. -->
+
+        <!-- slidehow -->
         <div class="slideshow-container">
             <div class="slide fade">
                 <img src="photos/florida-home-1.jpg" style="width:100%" />
@@ -42,6 +60,81 @@
             </div>
             <div class="slide fade">
                 <img src="photos/florida-home-3.jpg" style="width:100%" />
+            </div>
+        </div>
+
+        <!-- contact form -->
+        <div class="contact-container">
+            <div class="contact-bg">
+                <form action="something.php">
+
+                    <div class="contact-title">
+                        Contact Us
+                    </div>
+
+                    <label for="name">Name</label>
+                    <input type="text" id="contactName" name="name" placeholder="NAME">
+
+                    <label for="email">Email</label>
+                    <input type="text" id="contactEmail" name="email" placeholder="EMAIL">
+
+                    <label for="message">Message</label>
+                    <textarea id="contactMessage" name="message" placeholder="MESSAGE"></textarea>
+
+                    <input type="submit" value="Submit">
+
+                </form>
+            </div>
+        </div>
+
+
+        <!-- bottom banner? -->
+
+        <!-- footer -->
+        <div class="footer">
+            <div class="footer-row">
+                <div class="footer-info">
+                    <p>
+                        A conceirge service in Sarasota
+                        <br>
+                        <a href="mailto:fakemail@gmail.com" class="nostyle">
+                            fakemail@gmail.com
+                        </a>
+                        <br>
+                        123-456-7890
+                        <br>
+                        Sarasota, FL
+                    </p>
+                </div>
+                <div class="footer-social">
+                    <ul id="socialLinks">
+                        <li>
+                            <a id="socialText" href="#" target="_blank">
+                                Facebook
+                            </a>
+                            <!-- add image alt -->
+                        </li>
+                        <li id="divider">|</li>
+                        <li>
+                            <a id="socialText" href="#" target="_blank">
+                                Instagram
+                            </a>
+                            <!-- add image alt -->
+                        </li>
+                        <li id="divider">|</li>
+                        <li>
+                            <a id="socialText" href="#" target="_blank">
+                                Twitter
+                            </a>
+                            <!-- add image alt -->
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-legal">
+                    <p>
+                        Copyright 2020 *insert company name* All Rights Reserved
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -73,7 +166,7 @@
             if (slideIndex > slides.length) {
                 slideIndex = 1;
             }
-            slides[slideIndex-1].style.display = "block";
+            slides[slideIndex - 1].style.display = "block";
             setTimeout(showSlides, 5000) // change image every 5 seconds
         }
     </script>
