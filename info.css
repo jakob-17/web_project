@@ -1,0 +1,81 @@
+:root {
+    /* text */
+    --main-text-color: #818181;
+    --main-highlight-color: #f1f1f1;
+    --main-hover-color: #444;
+
+    /* text backgrounds */
+    --main-bg-color: #f1f1f1;
+
+    /* company accents */
+    --main-comp-color: #251f56;
+    --main-comp-highlight-color: #362d7a;
+}
+
+h1 {
+    text-align: center;
+}
+
+.cust-quotes {
+    width: 80%;
+    margin-left: 10%;
+    padding: 30px 0px;
+}
+
+.scroll-left {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px 0px;
+    color: var(--main-text-color);
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.scroll-left p {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.5em;
+    /* starting position */
+    transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    /* apply animation */
+    animation: scroll-left 15s linear infinite;
+    -moz-animation: scroll-left 15s linear infinite;
+    -webkit-animation: scroll-left 15s linear infinite;
+}
+
+/* define the animtion */
+@-moz-keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+    }
+}
+@-webkit-keyframes scroll-left {
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
+@keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
