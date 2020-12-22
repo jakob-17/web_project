@@ -24,10 +24,14 @@
     display: none;
 }
 
-img {
+.slide-img  {
+    width: 100%;
     vertical-align: middle;
-    border-radius: 10%;
-    padding: 10px 40px;
+    padding: 10px 20px;
+    /* padding: 3px;
+    border: 3px solid black; */
+    border-radius: 15%;
+    background-color: inherit;
 }
 
 /* slideshow container */
