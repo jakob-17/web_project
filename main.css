@@ -13,7 +13,7 @@
 
 body {
     margin: 0;
-    font-family: Georgia, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;;
     background-color: var(--main-bg-color);
 }
 

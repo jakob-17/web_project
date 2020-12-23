@@ -12,6 +12,124 @@
     --main-comp-highlight-color: #362d7a;
 }
 
+
+#main {
+    padding: 0% 3%;
+}
+/* adjust body ('main') for larger screens */
+@media screen and (min-width: 750px) {
+    #main {
+        padding: 0% 15%;
+    } 
+}
+
+/* --- header extension --- */
+.hdr-container {
+    position: relative;
+    text-align: left;
+    color: white;
+}
+
+.title {
+    position: absolute;
+    top: 5%;
+    left: -3%;
+    font-weight: bold;
+    font-size: 7vw;
+    text-shadow: 
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.contact {
+    position: absolute;
+    bottom: 20%;
+    left: 3%;
+    font-size: 2vw;
+    padding: 5px 10px;
+    background-color: rgba(170, 170, 170, 0.7);
+    border: 1px solid white;
+    text-shadow: 
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    cursor: pointer;
+}
+
+.contact:hover {
+    background-color: rgba(170, 170, 170, 0.9);
+}
+
+/* --- testing --- */
+.extra-space {
+    padding: 250px 0px;
+}
+
+.helpful-text {
+    font-size: 2em;
+    background: powderblue;
+}
+
+/* --- contact form --- */
+.contact-container {
+    background-color: inherit;
+    padding: 20px;
+}
+
+.contact-bg {
+    background-color: #111;
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.contact-title {
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* style inputs w/ type="text", select elements,
+    and textareas */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc; /* gray border */
+    border-radius: 4px; /* rounded borders */
+    box-sizing: border-box; /* make sure padding & width stays in place */
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical; /* allow user to vertically resize the textarea */
+}
+
+form label {
+    padding-left: 1px;
+}
+
+input[type=submit] {
+    background-color: var(--main-comp-highlight-color);
+    color: white;
+    padding: 12px 20px;
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+    input[type=submit]:hover {
+        background-color: var(--main-comp-color);
+    }
+
+
+
+/* --- the rest is bullshit --- */
+
+
+
 h1 {
     text-align: center;
 }

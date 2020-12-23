@@ -98,13 +98,18 @@ input[type=text], select, textarea {
     resize: vertical; /* allow user to vertically resize the textarea */
 }
 
+form label {
+    padding-left: 1px;
+}
+
 input[type=submit] {
     background-color: var(--main-comp-highlight-color);
     color: white;
     padding: 12px 20px;
-    border: none;
+    border: 1px solid white;
     border-radius: 4px;
     cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
     input[type=submit]:hover {

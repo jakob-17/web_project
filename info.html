@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
     <title>Info</title>
 
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="info.css">
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="info.css" />
+
+    <link rel="stylesheet" href="aos-master/dist/aos.css" />
+    <script src="aos-master/dist/aos.js"></script>
 </head>
 
 <body>
@@ -17,88 +20,141 @@
         <a href="incentives.html">Incentives</a>
     </div>
 
-    <div id="main">
-        <!-- full-size header -->
-        <div class="header">
-            <div class=quickLinks>
-                <a class="active" href="index.html">Home</a>
-                <a href="info.html">Information</a>
-                <a href="incentives.html">Incentives</a>
-            </div>
-            <button class="navbtn" id="navBtn" onclick="clickNav()">
-                ☰
-            </button>
+    <!-- full-size header -->
+    <div class="header">
+        <div class=quickLinks>
+            <a class="active" href="index.html">Home</a>
+            <a href="info.html">Information</a>
+            <a href="incentives.html">Incentives</a>
+        </div>
+        <button class="navbtn" id="navBtn" onclick="clickNav()">
+            ☰
+        </button>
+    </div>
+
+    <!-- header extension -->
+    <div class="hdr-container">
+        <img src="photos/florida-home-1.jpg" alt="Florida Home"
+            style="width: 100%" />
+
+        <h1 class="title">
+            Get the concierge service you deserve. Right here.
+        </h1>
+
+        <div class="contact">
+            Contact Us
         </div>
 
+    </div>
+
+    <div id="main">
         <h1>What Can We Do For You?</h1>
 
-        <div class="cust-quotes">
+        <div class="extra-space"></div>
+
+        <div class="helpful-text" data-aos="fade-up">
+            Check out this animated text!
+        </div>
+
+        <div class="extra-space"></div>
+
+        <!-- contact form -->
+        <div class="contact-container">
+            <div class="contact-bg">
+                <form action="something.php">
+
+                    <div class="contact-title">
+                        Contact Us
+                    </div>
+
+                    <label for="name">Name</label>
+                    <input type="text" id="contactName" name="name" placeholder="NAME">
+
+                    <label for="email">Email</label>
+                    <input type="text" id="contactEmail" name="email" placeholder="EMAIL">
+
+                    <label for="message">Message</label>
+                    <textarea id="contactMessage" name="message" placeholder="MESSAGE"></textarea>
+
+                    <input type="submit" value="Submit">
+
+                </form>
+            </div>
+        </div>
+        
+        <!-- <div class="cust-quotes">
             <h3>Here's what customers are saying</h3>
             <div class="scroll-left">
                 <p>the best concierge service in florida!</p>
             </div>
-        </div>
+        </div> -->
 
         <!-- bottom banner? -->
 
-        <!-- footer -->
-        <div class="footer">
-            <div class="footer-row">
-                <div class="footer-info">
-                    <p>
-                        A concierge service in Sarasota
-                        <br>
-                        <a href="mailto:fakemail@gmail.com" class="nostyle">
-                            fakemail@gmail.com
+        
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-row">
+            <div class="footer-info">
+                <p>
+                    A concierge service in Sarasota
+                    <br>
+                    <a href="mailto:fakemail@gmail.com" class="nostyle">
+                        fakemail@gmail.com
+                    </a>
+                    <br>
+                    123-456-7890
+                    <br>
+                    Sarasota, FL
+                </p>
+            </div>
+            <div class="footer-social">
+                <ul id="socialLinks1">
+                    <li>
+                        <a id="socialText" href="#" target="_blank">
+                            Facebook
                         </a>
-                        <br>
-                        123-456-7890
-                        <br>
-                        Sarasota, FL
-                    </p>
+                    </li>
+                    <li id="divider">|</li>
+                    <li>
+                        <a id="socialText" href="#" target="_blank">
+                            Instagram
+                        </a>
+                    </li>
+                    <li id="divider">|</li>
+                    <li>
+                        <a id="socialText" href="#" target="_blank">
+                            Twitter
+                        </a>
+                    </li>
+                </ul>
+                <div id="socialLinks2">
+                    <a id="socialImage" href="#" target="_blank">
+                        <img class="social-svg" src="icons/facebook-rounded.svg" />
+                    </a>
+                    <a id="socialImage" href="#" target="_blank">
+                        <img class="social-svg" src="icons/instagram-rounded.svg" />
+                    </a>
+                    <a id="socialImage" href="#" target="_blank">
+                        <img class="social-svg" src="icons/twitter-rounded.svg" />
+                    </a>
                 </div>
-                <div class="footer-social">
-                    <ul id="socialLinks1">
-                        <li>
-                            <a id="socialText" href="#" target="_blank">
-                                Facebook
-                            </a>
-                        </li>
-                        <li id="divider">|</li>
-                        <li>
-                            <a id="socialText" href="#" target="_blank">
-                                Instagram
-                            </a>
-                        </li>
-                        <li id="divider">|</li>
-                        <li>
-                            <a id="socialText" href="#" target="_blank">
-                                Twitter
-                            </a>
-                        </li>
-                    </ul>
-                    <div id="socialLinks2">
-                        <a id="socialImage" href="#" target="_blank">
-                            <img class="social-svg" src="icons/facebook-rounded.svg" />
-                        </a>
-                        <a id="socialImage" href="#" target="_blank">
-                            <img class="social-svg" src="icons/instagram-rounded.svg" />
-                        </a>
-                        <a id="socialImage" href="#" target="_blank">
-                            <img class="social-svg" src="icons/twitter-rounded.svg" />
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-legal">
-                    <p>
-                        Copyright 2020 *insert company name* All Rights Reserved
-                    </p>
-                </div>
+            </div>
+            <div class="footer-legal">
+                <p>
+                    Copyright 2020 *insert company name* All Rights Reserved
+                </p>
             </div>
         </div>
     </div>
 
     <script>
+        // initialize on-scroll animation script
+        AOS.init();
+
+        // (small screen) hamburger menu controls
         function clickNav() {
             let sidebar = document.getElementById("collapsedSidebar");
             let btn = document.getElementById("navBtn")
