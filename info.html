@@ -41,7 +41,7 @@
             Get the concierge service you deserve. Right here.
         </h1>
 
-        <div class="contact">
+        <div class="contact" onclick="scrollToForm()">
             Contact Us
         </div>
 
@@ -50,6 +50,7 @@
     <div id="main">
         <h1>What Can We Do For You?</h1>
 
+        <!-- bullshit -->
         <div class="extra-space"></div>
 
         <div class="helpful-text" data-aos="fade-up">
@@ -59,7 +60,7 @@
         <div class="extra-space"></div>
 
         <!-- contact form -->
-        <div class="contact-container">
+        <div id="contactContainer">
             <div class="contact-bg">
                 <form action="something.php">
 
@@ -166,6 +167,11 @@
                 sidebar.style.width = "150px";
                 btn.style.marginRight = "150px";
             }
+        }
+
+        function scrollToForm() {
+            let form = document.getElementById("contactContainer");
+            form.scrollIntoView(true);
         }
     </script>
 </body>

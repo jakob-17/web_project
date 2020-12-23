@@ -12,7 +12,6 @@
     --main-comp-highlight-color: #362d7a;
 }
 
-
 #main {
     padding: 0% 3%;
 }
@@ -74,7 +73,7 @@
 }
 
 /* --- contact form --- */
-.contact-container {
+#contactContainer {
     background-color: inherit;
     padding: 20px;
 }

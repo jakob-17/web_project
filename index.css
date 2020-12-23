@@ -66,7 +66,7 @@
     }
 } */
 
-.contact-container {
+#contactContainer {
     background-color: inherit;
     padding: 20px;
 }
