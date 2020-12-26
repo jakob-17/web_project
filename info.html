@@ -48,16 +48,64 @@
     </div>
 
     <div id="main">
-        <h1>What Can We Do For You?</h1>
+        <div class="sectionTitle section1">
+            - A Group of Professionals -
+        </div>
 
-        <!-- bullshit -->
-        <div class="extra-space"></div>
+        <div class="sectionBody">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Nullam finibus, erat et accumsan volutpat, ligula tortor 
+            pellentesque dolor, et hendrerit eros arcu et augue. 
+            Praesent bibendum odio eu lorem bibendum, quis tempor enim 
+            fermentum.  
+        </div>
+
+        <hr>
+
+        <div class="sectionTitle section2">
+            - About the Service -
+        </div>
+
+        <div class="sectionBody">
+            Etiam imperdiet massa sit amet posuere ullamcorper. 
+            Maecenas a porttitor neque, et convallis lectus. Proin 
+            convallis nisi eget nisi varius, id gravida elit cursus. 
+            Praesent in leo posuere, euismod felis non, mattis lacus. 
+            Etiam vitae tincidunt metus, semper eleifend mauris. Aenean
+             ut posuere enim, vel eleifend tellus.
+        </div>
+
+        <hr>
+
+        <div class="sectionTitle section3">
+            - Incentives -
+        </div>
+
+        <div class="sectionBody">
+            In placerat tempus sem et vehicula. Nullam nec tortor a 
+            libero aliquam vehicula et eu mi. Sed pulvinar sodales 
+            augue, a viverra enim ullamcorper tempor. Donec neque velit,
+             elementum at dapibus in, gravida non risus.
+        </div>
+
+        <div class="sectionBody">
+            Nulla rutrum vel urna id tempor. Curabitur consectetur dui 
+            ac sem consectetur ullamcorper. Proin id eros at mi molestie 
+            interdum ut non tortor. Donec et nulla maximus, sagittis 
+            mauris non, molestie turpis. Sed nulla enim, maximus sed 
+            viverra vitae, interdum eu sapien.
+        </div>
+
+        <hr>
+
+        <!-- testing -->
+        <!-- <div class="extra-space"></div>
 
         <div class="helpful-text" data-aos="fade-up">
             Check out this animated text!
         </div>
 
-        <div class="extra-space"></div>
+        <div class="extra-space"></div> -->
 
         <!-- contact form -->
         <div id="contactContainer">
@@ -69,13 +117,13 @@
                     </div>
 
                     <label for="name">Name</label>
-                    <input type="text" id="contactName" name="name" placeholder="NAME">
+                    <input type="text" id="contactName" name="name" placeholder="Bob Marley">
 
                     <label for="email">Email</label>
-                    <input type="text" id="contactEmail" name="email" placeholder="EMAIL">
+                    <input type="text" id="contactEmail" name="email" placeholder="littlebirds@gmail.com">
 
                     <label for="message">Message</label>
-                    <textarea id="contactMessage" name="message" placeholder="MESSAGE"></textarea>
+                    <textarea id="contactMessage" name="message" placeholder="Hello! I would like to schedule a phone call with your company."></textarea>
 
                     <input type="submit" value="Submit">
 
@@ -153,7 +201,10 @@
 
     <script>
         // initialize on-scroll animation script
-        AOS.init();
+        AOS.init({
+            //disable: 'mobile',
+            once: true,
+        });
 
         // (small screen) hamburger menu controls
         function clickNav() {

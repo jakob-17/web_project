@@ -15,12 +15,6 @@
 #main {
     padding: 0% 3%;
 }
-/* adjust body ('main') for larger screens */
-@media screen and (min-width: 750px) {
-    #main {
-        padding: 0% 15%;
-    } 
-}
 
 /* --- header extension --- */
 .hdr-container {
@@ -62,15 +56,31 @@
     background-color: rgba(170, 170, 170, 0.9);
 }
 
+.sectionTitle {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 50px 30px 10px 30px;
+}
+
+.sectionBody {
+    font-size: 1em;
+    padding: 20px 20px;
+}
+
+hr {
+    margin: 50px 25%;
+}
+
 /* --- testing --- */
-.extra-space {
+/* .extra-space {
     padding: 250px 0px;
 }
 
 .helpful-text {
     font-size: 2em;
     background: powderblue;
-}
+} */
 
 /* --- contact form --- */
 #contactContainer {
@@ -109,6 +119,10 @@ form label {
     padding-left: 1px;
 }
 
+#contactName, #contactEmail, #contactMessage {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 input[type=submit] {
     background-color: var(--main-comp-highlight-color);
     color: white;
@@ -123,6 +137,22 @@ input[type=submit] {
         background-color: var(--main-comp-color);
     }
 
+
+/* adjust body ('main'), etc. for larger screens */
+@media screen and (min-width: 750px) {
+    #main {
+        padding: 0% 15%;
+    } 
+
+    .sectionTitle {
+        margin: 0% 15%;
+        font-size: 2em;
+    }
+    .sectionBody {
+        margin: 0% 10%;
+        font-size: 1.5em;
+    }
+}
 
 
 /* --- the rest is bullshit --- */
