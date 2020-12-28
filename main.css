@@ -141,9 +141,12 @@ p {
     color: var(--main-highlight-color);
 }
 
+#socialLinks2 {
+    width: 80%;
+}
+
 .social-svg {
-    width: 10%;
-    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .footer-legal {
