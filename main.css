@@ -33,18 +33,18 @@ body {
     padding: 10px 10px;
 }
 
-.quickLinks {
+.quick-links {
     display: none;
     float: right;
 }
 
-.quickLinks a {
+.quick-links a {
     text-decoration: none;
     color: var(--main-text-color);
     padding-right: 15px;
 }
 
-.quickLinks a:hover {
+.quick-links a:hover {
     color: var(--main-highlight-color);
 }
 
@@ -170,7 +170,7 @@ p {
         display: none;
     }
 
-    .quickLinks {
+    .quick-links {
         display: inline-block
     }
 
