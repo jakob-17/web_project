@@ -68,7 +68,11 @@
     padding: 20px 20px;
 }
 
-hr  {
+.link-separator {
+    margin-right: 50%;
+}
+
+.body-separator {
     margin: 50px 25%;
 }
 
