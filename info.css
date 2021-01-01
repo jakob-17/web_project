@@ -37,9 +37,9 @@
         1px 1px 0 #000;
 }
 
-.contact {
+.contact-btn {
     position: absolute;
-    bottom: 30%;
+    bottom: 35%; /* wack, but works */
     left: 3%;
     font-size: 2vw;
     padding: 5px 10px;
@@ -53,7 +53,7 @@
     cursor: pointer;
 }
 
-.contact:hover {
+.contact-btn:hover {
     background-color: rgba(170, 170, 170, 0.9);
 }
 
@@ -139,7 +139,11 @@ input[type=submit] {
 @media screen and (min-width: 750px) {
     #main {
         padding: 0% 15%;
-    } 
+    }
+
+    .contact-btn {
+        bottom: 30%;
+    }
 
     .section-title {
         margin: 0% 7%;
