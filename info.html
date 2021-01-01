@@ -36,66 +36,71 @@
 
     <!-- header extension -->
     <div class="hdr-container">
-        <img src="photos/florida-home-1.jpg" alt="Florida Home"
-            style="width: 100%" />
+        <img src="photos/florida-home-1.jpg" alt="Florida Home" style="width: 100%" />
 
-        <h1 class="title">
+        <h1 class="title" data-aos="fade-right" data-aos-duration="2000">
             Get the concierge service you deserve. Right here.
         </h1>
 
-        <div class="contact" onclick="scrollToForm()">
+        <div class="contact" onclick="scrollToForm()" data-aos="fade-right" data-aos-duration="2000">
             Contact Us
         </div>
 
     </div>
 
     <div id="main">
-        <div class="section-title section1">
-            The Best Concierge Service in Florida
-        </div>
+        <div class="section1">
+            <div class="section-title">
+                The Best Concierge Service in Florida
+            </div>
 
-        <div class="section-body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Nullam finibus, erat et accumsan volutpat, ligula tortor 
-            pellentesque dolor, et hendrerit eros arcu et augue. 
-            Praesent bibendum odio eu lorem bibendum, quis tempor enim 
-            fermentum.  
-        </div>
-
-        <hr class="body-separator">
-
-        <div class="section-title section2">
-            About the Service
-        </div>
-
-        <div class="section-body">
-            Etiam imperdiet massa sit amet posuere ullamcorper. 
-            Maecenas a porttitor neque, et convallis lectus. Proin 
-            convallis nisi eget nisi varius, id gravida elit cursus. 
-            Praesent in leo posuere, euismod felis non, mattis lacus. 
-            Etiam vitae tincidunt metus, semper eleifend mauris. Aenean
-             ut posuere enim, vel eleifend tellus.
+            <div class="section-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nullam finibus, erat et accumsan volutpat, ligula tortor
+                pellentesque dolor, et hendrerit eros arcu et augue.
+                Praesent bibendum odio eu lorem bibendum, quis tempor enim
+                fermentum.
+            </div>
         </div>
 
         <hr class="body-separator">
 
-        <div class="section-title section3">
-            Incentives
+        <div class="section2">
+            <div class="section-title">
+                About the Service
+            </div>
+
+            <div class="section-body">
+                Etiam imperdiet massa sit amet posuere ullamcorper.
+                Maecenas a porttitor neque, et convallis lectus. Proin
+                convallis nisi eget nisi varius, id gravida elit cursus.
+                Praesent in leo posuere, euismod felis non, mattis lacus.
+                Etiam vitae tincidunt metus, semper eleifend mauris. Aenean
+                ut posuere enim, vel eleifend tellus.
+            </div>
         </div>
 
-        <div class="section-body">
-            In placerat tempus sem et vehicula. Nullam nec tortor a 
-            libero aliquam vehicula et eu mi. Sed pulvinar sodales 
-            augue, a viverra enim ullamcorper tempor. Donec neque velit,
-             elementum at dapibus in, gravida non risus.
-        </div>
+        <hr class="body-separator">
 
-        <div class="section-body">
-            Nulla rutrum vel urna id tempor. Curabitur consectetur dui 
-            ac sem consectetur ullamcorper. Proin id eros at mi molestie 
-            interdum ut non tortor. Donec et nulla maximus, sagittis 
-            mauris non, molestie turpis. Sed nulla enim, maximus sed 
-            viverra vitae, interdum eu sapien.
+        <div class="section3">
+            <div class="section-title">
+                Incentives
+            </div>
+
+            <div class="section-body">
+                In placerat tempus sem et vehicula. Nullam nec tortor a
+                libero aliquam vehicula et eu mi. Sed pulvinar sodales
+                augue, a viverra enim ullamcorper tempor. Donec neque velit,
+                elementum at dapibus in, gravida non risus.
+            </div>
+
+            <div class="section-body">
+                Nulla rutrum vel urna id tempor. Curabitur consectetur dui
+                ac sem consectetur ullamcorper. Proin id eros at mi molestie
+                interdum ut non tortor. Donec et nulla maximus, sagittis
+                mauris non, molestie turpis. Sed nulla enim, maximus sed
+                viverra vitae, interdum eu sapien.
+            </div>
         </div>
 
         <hr class="body-separator">
@@ -110,7 +115,7 @@
         <div class="extra-space"></div> -->
 
         <!-- contact form -->
-        <div id="contactContainer">
+        <div id="contactContainer" data-aos="flip-left" data-aos-duration="1500">
             <div class="contact-bg">
                 <form action="something.php">
 
@@ -125,14 +130,15 @@
                     <input type="text" id="contactEmail" name="email" placeholder="littlebirds@gmail.com">
 
                     <label for="message">Message</label>
-                    <textarea id="contactMessage" name="message" placeholder="Hello! I would like to schedule a phone call with your company."></textarea>
+                    <textarea id="contactMessage" name="message"
+                        placeholder="Hello! I would like to schedule a phone call with your company."></textarea>
 
                     <input type="submit" value="Submit">
 
                 </form>
             </div>
         </div>
-        
+
         <!-- <div class="cust-quotes">
             <h3>Here's what customers are saying</h3>
             <div class="scroll-left">
@@ -142,12 +148,12 @@
 
         <!-- bottom banner? -->
 
-        
+
     </div>
 
     <!-- footer -->
     <div class="footer">
-        <div class="footer-row">
+        <div class="footer-row" data-aos="fade-down" data-aos-duration="1500">
             <div class="footer-info">
                 <p>
                     A concierge service in Sarasota
@@ -211,7 +217,7 @@
         var gSidebar = document.getElementById('collapsedSidebar');
         var gBtn = document.getElementById('navBtn');
 
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             var clickInside = gSidebar.contains(event.target);
             var clickInside2 = gBtn.contains(event.target);
             if (!clickInside && !clickInside2) {

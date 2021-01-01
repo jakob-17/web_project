@@ -21,6 +21,7 @@
     position: relative;
     text-align: left;
     color: white;
+    padding-bottom: 75px;
 }
 
 .title {
@@ -60,7 +61,8 @@
     text-align: left;
     font-weight: bold;
     font-size: 1.5em;
-    padding: 50px 30px 10px 30px;
+    /* padding: 50px 30px 10px 30px; */
+    padding-left: 5%;
 }
 
 .section-body {
@@ -68,28 +70,19 @@
     padding: 20px 20px;
 }
 
+/* --- hr's --- */
 .link-separator {
     margin-right: 50%;
 }
 
 .body-separator {
-    margin: 50px 25%;
+    margin: 75px 25%;
 }
-
-/* --- testing --- */
-/* .extra-space {
-    padding: 250px 0px;
-}
-
-.helpful-text {
-    font-size: 2em;
-    background: powderblue;
-} */
 
 /* --- contact form --- */
 #contactContainer {
     background-color: inherit;
-    padding: 20px;
+    padding: 10px 20px 75px 20px;
 }
 
 .contact-bg {
@@ -149,11 +142,11 @@ input[type=submit] {
     } 
 
     .section-title {
-        margin: 0% 15%;
+        margin: 0% 7%;
         font-size: 2em;
     }
     .section-body {
-        margin: 0% 10%;
+        margin: 0% 5%;
         font-size: 1.5em;
     }
 }
