@@ -57,6 +57,7 @@
     background-color: rgba(170, 170, 170, 0.9);
 }
 
+/* --- main sections --- */
 .section-title {
     text-align: left;
     font-weight: bold;
@@ -68,6 +69,29 @@
 .section-body {
     font-size: 1em;
     padding: 20px 20px;
+}
+
+/* --- incentive list --- */
+ul {
+    list-style: none;
+    font-size: 1.1em;
+}
+
+ul .i-list::before {
+    content: "";
+    background-image: url(icons/etc/arrow_forward_ios-24px.svg);
+    background-size: contain;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: 0.1rem;
+    margin-right: 0.2rem;
+}
+
+.i-list {
+    padding: 10px;
+    text-indent: -1.2em;
 }
 
 /* --- hr's --- */
@@ -99,8 +123,7 @@
     font-weight: bold;
 }
 
-/* style inputs w/ type="text", select elements,
-    and textareas */
+/* style inputs w/ type="text", select elements, and textareas */
 input[type=text], select, textarea {
     width: 100%;
     padding: 20px;
@@ -152,6 +175,11 @@ input[type=submit] {
     .section-body {
         margin: 0% 5%;
         font-size: 1.5em;
+    }
+
+    .i-list {
+        font-size: 1.2em;
+        margin: 20px 6%;
     }
 }
 
