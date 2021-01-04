@@ -103,9 +103,9 @@ ul .i-list::before {
 }
 
 /* --- hr's --- */
-.link-separator {
+/* .link-separator {
     margin-right: 50%;
-}
+} */
 
 .body-separator {
     margin: 75px 25%;
