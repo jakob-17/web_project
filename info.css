@@ -24,9 +24,13 @@
     padding-bottom: 75px;
 }
 
+.img-container {
+    width: 100%;
+    overflow: hidden;
+}
+
 .hdr-img {
     width: 200%;
-    overflow: hidden;
 }
 
 .title {
@@ -103,9 +107,9 @@ ul .i-list::before {
 }
 
 /* --- hr's --- */
-/* .link-separator {
+.link-separator {
     margin-right: 50%;
-} */
+}
 
 .body-separator {
     margin: 75px 25%;
