@@ -168,11 +168,6 @@ input[type=submit] {
         background-color: var(--main-comp-color);
     }
 
-/* adjust header for mobile devices */
-@media only screen and (hover: none) and (pointer: coarse) {
-    
-}
-
 /* adjust body ('main'), etc. for larger screens */
 @media screen and (min-width: 750px) {
     #main {
