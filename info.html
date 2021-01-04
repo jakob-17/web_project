@@ -211,22 +211,9 @@
             once: true,
         });
 
-        var gSidebar = document.getElementById('collapsedSidebar');
-        var gBtn = document.getElementById('navBtn');
-
-        document.addEventListener('click', function (event) {
-            var clickInside = gSidebar.contains(event.target);
-            var clickInside2 = gBtn.contains(event.target);
-            if (!clickInside && !clickInside2) {
-                // click was outside the sidebar
-                closeSidebar();
-            }
-        });
-
-        // (small screen) hamburger menu controls
         function clickNav() {
             let sidebar = document.getElementById("collapsedSidebar");
-            let btn = document.getElementById("navBtn");
+            let btn = document.getElementById("navBtn")
             if (sidebar.style.width == "150px") {
                 sidebar.style.width = "0px";
                 btn.style.marginRight = "0px";
