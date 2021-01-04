@@ -24,12 +24,17 @@
     padding-bottom: 75px;
 }
 
+.hdr-img {
+    width: 200%;
+}
+
 .title {
     position: absolute;
+    text-align: left;
     top: 5%;
-    left: -3%;
+    left: -1%;
     font-weight: bold;
-    font-size: 7vw;
+    font-size: 10vw;
     text-shadow: 
         -1px -1px 0 #000,
         1px -1px 0 #000,
@@ -39,9 +44,10 @@
 
 .contact-btn {
     position: absolute;
-    bottom: 35%; /* wack, but works */
+    bottom: 30%; /* wack, but works */
     left: 3%;
-    font-size: 2vw;
+    font-size: 5vw;
+    font-family: Arial, Helvetica, sans-serif;
     padding: 5px 10px;
     background-color: rgba(170, 170, 170, 0.7);
     border: 1px solid white;
@@ -90,7 +96,7 @@ ul .i-list::before {
 }
 
 .i-list {
-    padding: 10px;
+    padding: 30px 10px;
     text-indent: -1.2em;
 }
 
@@ -119,8 +125,9 @@ ul .i-list::before {
 .contact-title {
     text-align: center;
     padding: 20px 0px;
-    font-size: 2em;
+    font-size: 2.2em;
     font-weight: bold;
+    font-family: 'Trebuchet MS';
 }
 
 /* style inputs w/ type="text", select elements, and textareas */
@@ -137,6 +144,8 @@ input[type=text], select, textarea {
 
 form label {
     padding-left: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 #contactName, #contactEmail, #contactMessage {
@@ -150,13 +159,18 @@ input[type=submit] {
     border: 1px solid white;
     border-radius: 4px;
     cursor: pointer;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Trebuchet MS';
+    font-size: 1.2em;
 }
 
     input[type=submit]:hover {
         background-color: var(--main-comp-color);
     }
 
+/* adjust header for mobile devices */
+@media only screen and (hover: none) and (pointer: coarse) {
+    
+}
 
 /* adjust body ('main'), etc. for larger screens */
 @media screen and (min-width: 750px) {
@@ -164,8 +178,16 @@ input[type=submit] {
         padding: 0% 15%;
     }
 
+    .hdr-img {
+        width: 100%;
+    }
+    .title {
+        font-size: 7vw;
+        left: 10px;
+    }
     .contact-btn {
-        bottom: 30%;
+        font-size: 4vw;
+        left: 30px;
     }
 
     .section-title {
