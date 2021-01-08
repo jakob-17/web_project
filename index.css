@@ -10,6 +10,7 @@
     /* company accents */
     --main-comp-color: #251f56;
     --main-comp-highlight-color: #362d7a;
+    --main-comp-highlight-color-alt: #665AC4;
 }
 
 #main {
@@ -21,7 +22,7 @@
     position: relative;
     text-align: left;
     color: white;
-    padding-bottom: 75px;
+    padding-bottom: 10%;
 }
 
 .img-container {
@@ -30,16 +31,18 @@
 }
 
 .hdr-img {
-    width: 200%;
+    width: 150%;
+    margin-top: -6%;
+    margin-bottom: -6%;
 }
 
 .title {
     position: absolute;
     text-align: left;
-    top: 5%;
+    top: 0%;
     left: -1%;
     font-weight: bold;
-    font-size: 10vw;
+    font-size: 8vw;
     text-shadow: 
         -1px -1px 0 #000,
         1px -1px 0 #000,
@@ -49,7 +52,7 @@
 
 .contact-btn {
     position: absolute;
-    bottom: 30%; /* wack, but works */
+    bottom: 20%; /* wack, but works */
     left: 3%;
     font-size: 5vw;
     font-family: 'Trebuchet MS';
@@ -118,12 +121,13 @@ ul .i-list::before {
 /* --- contact form --- */
 #contactContainer {
     background-color: inherit;
-    padding: 10px 20px 75px 20px;
+    padding: 10px 12% 75px 12%;
 }
 
 .contact-bg {
-    background-color: #111;
-    color: white;
+    /* background-color: #111;
+    color: white; */
+    color: black;
     border-radius: 5px;
     padding: 20px;
 }
@@ -158,19 +162,21 @@ form label {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-input[type=submit] {
-    background-color: var(--main-comp-highlight-color);
-    color: white;
+.submit-btn {
+    background-color: var(--main-bg-color);
+    color: var(--main-comp-color);
     padding: 12px 20px;
-    border: 1px solid white;
+    border: 2px solid var(--main-comp-color);
     border-radius: 4px;
     cursor: pointer;
     font-family: 'Trebuchet MS';
     font-size: 1.2em;
+    font-weight: 600;
 }
 
-    input[type=submit]:hover {
-        background-color: var(--main-comp-color);
+    .submit-btn:hover {
+        background-color: var(--main-comp-highlight-color-alt);
+        color: white;
     }
 
 /* adjust body ('main'), etc. for larger screens */
@@ -189,10 +195,15 @@ input[type=submit] {
     .contact-btn {
         font-size: 4vw;
         left: 30px;
+        bottom: 25%;
+    }
+
+    .section1 {
+        margin-top: -5%;
     }
 
     .section-title {
-        margin: 0% 7%;
+        margin: 0% 5%;
         font-size: 2em;
     }
     .section-body {
@@ -203,6 +214,13 @@ input[type=submit] {
     .i-list {
         font-size: 1.2em;
         margin: 20px 6%;
+    }
+}
+
+/* adjust body ('main'), etc. for huge screens */
+@media screen and (min-width: 1500px) {
+    .section1 {
+        margin-top: -10%;
     }
 }
 
