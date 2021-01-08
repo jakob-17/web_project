@@ -89,19 +89,11 @@ body {
     background-color: var(--main-hover-color);
 }
 
-/* #main {
-    transition: margin-right .5s;
-} */
-
 #navBtn {
     transition: margin-right .45s;
 }
 
-h1 {
-    padding: 0px 20px;
-}
-
-p {
+.footer-text {
     padding: 0px 20px 20px 20px;
 }
 
@@ -133,10 +125,6 @@ p {
     list-style-type: none;
     padding-left: 20px;
 }
-
-/* #socialLinks2 {
-    
-} */
 
 #socialText, #divider {
     color: var(--main-highlight-color);

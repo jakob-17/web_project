@@ -22,7 +22,7 @@
     position: relative;
     text-align: left;
     color: white;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
 }
 
 .img-container {
@@ -40,7 +40,7 @@
     position: absolute;
     text-align: left;
     top: 0%;
-    left: -1%;
+    left: 3%;
     font-weight: bold;
     font-size: 8vw;
     text-shadow: 
@@ -52,13 +52,13 @@
 
 .contact-btn {
     position: absolute;
-    bottom: 20%; /* wack, but works */
+    bottom: 15%;
     left: 3%;
     font-size: 5vw;
     font-family: 'Trebuchet MS';
     padding: 5px 10px;
     background-color: rgba(170, 170, 170, 0.7);
-    border: 1px solid white;
+    border: 2px solid white;
     text-shadow: 
         -1px -1px 0 #000,
         1px -1px 0 #000,
@@ -70,14 +70,19 @@
 
 .contact-btn:hover {
     background-color: rgba(170, 170, 170, 0.9);
+    border-bottom: 1px solid white;
+    
 }
 
 /* --- main sections --- */
+.section1 {
+    padding-top: 20px;;
+}
+
 .section-title {
     text-align: left;
     font-weight: bold;
     font-size: 1.5em;
-    /* padding: 50px 30px 10px 30px; */
     padding-left: 5%;
 }
 
@@ -121,12 +126,10 @@ ul .i-list::before {
 /* --- contact form --- */
 #contactContainer {
     background-color: inherit;
-    padding: 10px 12% 75px 12%;
+    padding: 10px 6% 75px 6%;
 }
 
 .contact-bg {
-    /* background-color: #111;
-    color: white; */
     color: black;
     border-radius: 5px;
     padding: 20px;
@@ -170,8 +173,8 @@ form label {
     border-radius: 4px;
     cursor: pointer;
     font-family: 'Trebuchet MS';
-    font-size: 1.2em;
-    font-weight: 600;
+    font-size: 1em;
+    font-weight: normal;
 }
 
     .submit-btn:hover {
@@ -181,27 +184,25 @@ form label {
 
 /* adjust body ('main'), etc. for larger screens */
 @media screen and (min-width: 750px) {
+    /* narrow allowed width of all content (besides header/footer) */
     #main {
         padding: 0% 15%;
     }
 
+    /* header extension */
     .hdr-img {
         width: 100%;
     }
     .title {
         font-size: 7vw;
-        left: 10px;
     }
     .contact-btn {
         font-size: 4vw;
-        left: 30px;
-        bottom: 25%;
+        left: 3%;
+        bottom: 20%;
     }
 
-    .section1 {
-        margin-top: -5%;
-    }
-
+    /* text sections */
     .section-title {
         margin: 0% 5%;
         font-size: 2em;
@@ -210,89 +211,19 @@ form label {
         margin: 0% 5%;
         font-size: 1.5em;
     }
-
     .i-list {
         font-size: 1.2em;
         margin: 20px 6%;
     }
+
+    /* contact form */
+    #contactContainer {
+        padding: 10px 12% 75px 12%;
+    }
+
 }
 
 /* adjust body ('main'), etc. for huge screens */
 @media screen and (min-width: 1500px) {
-    .section1 {
-        margin-top: -10%;
-    }
-}
 
-
-/* --- the rest is bullshit --- */
-
-
-
-h1 {
-    text-align: center;
-}
-
-.cust-quotes {
-    width: 80%;
-    margin-left: 10%;
-    padding: 30px 0px;
-}
-
-.scroll-left {
-    height: 50px;
-    overflow: hidden;
-    position: relative;
-    margin: 20px 0px;
-    color: var(--main-text-color);
-    border-right: 2px solid black;
-    border-left: 2px solid black;
-}
-
-.scroll-left p {
-    position: absolute;
-    width: 80%;
-    height: 100%;
-    margin: 0;
-    line-height: 50px;
-    text-align: center;
-    font-size: 1.5em;
-    /* starting position */
-    transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    /* apply animation */
-    animation: scroll-left 15s linear infinite;
-    -moz-animation: scroll-left 15s linear infinite;
-    -webkit-animation: scroll-left 15s linear infinite;
-}
-
-/* define the animtion */
-@-moz-keyframes scroll-left {
-    0% {
-        -moz-transform: translateX(100%);
-    }
-    100% {
-        -moz-transform: translateX(-100%);
-    }
-}
-@-webkit-keyframes scroll-left {
-    0% {
-        -webkit-transform: translateX(100%);
-    }
-    100% {
-        -webkit-transform: translateX(-100%);
-    }
-}
-@keyframes scroll-left {
-    0% {
-        -moz-transform: translateX(100%);
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
-    }
-    100% {
-        -moz-transform: translateX(-100%);
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
-    }
 }
