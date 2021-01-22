@@ -120,7 +120,7 @@
         <!-- contact form -->
         <div id="contactContainer" data-aos="zoom-in" data-aos-duration="1500">
             <div class="contact-bg">
-                <form action="something.php">
+                <form method="POST" action="contact.php">
 
                     <div class="contact-title">
                         Contact Us
@@ -130,7 +130,8 @@
                     <input type="text" id="contactName" name="name" placeholder="Bob Marley">
 
                     <label for="email">Email</label>
-                    <input type="text" id="contactEmail" name="email" placeholder="littlebirds@gmail.com">
+                    <input type="email" id="_contactEmail" name="_email" placeholder="littlebirds@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                    <input type="email" id="contactEmail" name="email" placeholder="littlebirds@gmail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
 
                     <label for="message">Message</label>
                     <textarea id="contactMessage" name="message"

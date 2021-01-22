@@ -146,7 +146,7 @@ ul .i-list::before {
 }
 
 /* style inputs w/ type="text", select elements, and textareas */
-input[type=text], select, textarea {
+input[type=text], input[type=email], select, textarea {
     width: 100%;
     padding: 20px;
     border: 1px solid #ccc; /* gray border */
@@ -165,6 +165,10 @@ form label {
 
 #contactName, #contactEmail, #contactMessage {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#_contactEmail {
+    display: none;
 }
 
 .submit-btn {
