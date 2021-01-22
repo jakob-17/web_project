@@ -9,7 +9,8 @@
     error_reporting(E_ALL);
     ////
 
-    if (count($_POST) > 0) {
+    // if (count($_POST) > 0) {
+    if ($_POST) {
         // may want to add captcha
 
         // initialize variables
