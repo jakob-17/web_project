@@ -57,7 +57,7 @@
 
         $headers = 'MIME-Version: 1.0' . "\r\n"
             .'Content-type: text/html; charset=utf-8' . "\r\n"
-            .'From: ' . $email . "\r\n";
+            .'From: ' . $email_fill . "\r\n";
 
         $headers .= "Reply-To: $email";
 
