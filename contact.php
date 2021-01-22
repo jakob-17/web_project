@@ -53,9 +53,13 @@
 
         $email_body .= "</div>";
 
+        $email_fill = "jakob@quizzical-swanson-0f612c.netlify.app"
+
         $headers = 'MIME-Version: 1.0' . "\r\n"
             .'Content-type: text/html; charset=utf-8' . "\r\n"
             .'From: ' . $email . "\r\n";
+
+        $headers .= "Reply-To: $email";
 
         $email_title = "Testing";
 
