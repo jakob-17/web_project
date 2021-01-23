@@ -28,13 +28,13 @@
 .img-container {
     width: 100%;
     overflow: hidden;
-    background: url(photos/header-low-res.jpg);
 }
 
 .hdr-img {
     width: 150%;
     margin-top: -6%;
     margin-bottom: -6%;
+    background-image: url(photos/header-low-res.jpg);
 }
 
 .title {
