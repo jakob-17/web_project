@@ -13,6 +13,51 @@
 
 </head>
 
+<style>
+    /* inline style for unblurring header effect (js searches this document) */
+    header {
+        display: block;
+    }
+
+    .index-header {
+        overflow: hidden;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        height: 50vw;
+        margin: 0 auto;
+        background-color: #567DA7;
+        background-size: cover;
+        background-position: 50% 0;
+        background-image: url(photos/header-lowest-res.jpg);
+    }
+
+    .index-header-enhanced {
+        background-image: url(photos/header-high-res.jpg);
+    }
+
+    @supports (background-image: filter(url('i.jpg'), blur(1px))) {
+        .index-header {
+            transform: translateZ(0);
+        }
+
+        .index-header-enhanced {
+            animation: sharpen 0.5s both;
+        }
+
+        @keyframes sharpen {
+            from {
+                background-image: filter(url(photos/header-high-res.jpg), blur(20px));
+            }
+
+            to {
+                background-image: filter(url(photos/header-high-res.jpg), blur(0px));
+            }
+        }
+    }
+</style>
+
 <body>
     <!-- collapsed header -->
     <div class="sidebar" id="collapsedSidebar">
@@ -35,21 +80,15 @@
         </button>
     </div>
 
-    <!-- header extension -->
-    <div class="hdr-container">
-        <div class="img-container">
-            <img class="hdr-img" src="photos/header-high-res.jpg" alt="Florida coastline" />
-        </div>
-
-        <h1 class="title" data-aos="fade-right" data-aos-duration="2000">
+    <header class="index-header">
+        <h1 class="index-title" data-aos="fade-right" data-aos-duration="2000">
             Get the concierge service you deserve. Right here.
         </h1>
 
         <div class="contact-btn" onclick="scrollToForm()" data-aos="fade-right" data-aos-duration="2000">
             Contact Us
         </div>
-
-    </div>
+    </header>
 
     <div id="main">
         <!-- text sections -->
@@ -133,7 +172,8 @@
 
                     <label for="email">Email</label>
                     <!-- <input type="email" id="_contactEmail" name="_email" placeholder="littlebirds@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" /> -->
-                    <input type="email" id="contactEmail" name="email" placeholder="littlebirds@gmail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                    <input type="email" id="contactEmail" name="email" placeholder="littlebirds@gmail.com" required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
 
                     <label for="message">Message</label>
                     <textarea id="contactMessage" name="message"
@@ -248,6 +288,58 @@
             let form = document.getElementById("contactContainer");
             form.scrollIntoView(true);
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // experiment
+            window.onload = function loadStuff() {
+                var win, doc, img, header, enhancedClass;
+                // quit early if older browser
+                if (!('addEventListener' in window)) {
+                    return;
+                }
+
+                win = window;
+                doc = win.document;
+                img = new Image();
+                header = doc.querySelector('.index-header');
+                enhancedClass = 'index-header-enhanced';
+
+                // convoluted
+                var bigSrc = (function () {
+                    // find all the CssRule objects inside the inline stylesheet
+                    var styles = doc.querySelector('style').sheet.cssRules;
+                    // fetch the background-image declaration..
+                    var bgDecl = (function () {
+                        // .. via a self-executing function
+                        var bgStyle, i, l = styles.length;
+                        for (i = 0; i < l; i++) {
+                            // .. checking if the rule is the one targeting the enhanced header
+                            if (styles[i].selectorText && styles[i].selectorText == '.' + enhancedClass) {
+                                bgStyle = styles[i].style.backgroundImage;
+                                break;
+                            }
+                        }
+                        // return that text
+                        return bgStyle;
+                    }());
+
+                    // finally, return match for the url inside the background-image
+                    return bgDecl && bgDecl.match(/(?:\(['|"]?)(.*?)(?:['|"]?\))/)[1];
+                }());
+
+                // assign onload handler to the dummy image *before* assigning the src
+                img.onload = function () {
+                    header.className += ' ' + enhancedClass;
+                };
+
+                // finally (again), trigger whole preloading chain by giving the dummy its source
+                if (bigSrc) {
+                    img.src = bigSrc;
+                }
+            };
+        })
+
     </script>
 </body>
 

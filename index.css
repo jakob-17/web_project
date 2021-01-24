@@ -3,10 +3,8 @@
     --main-text-color: #818181;
     --main-highlight-color: #f1f1f1;
     --main-hover-color: #444;
-
     /* text backgrounds */
     --main-bg-color: #f1f1f1;
-
     /* company accents */
     --main-comp-color: #251f56;
     --main-comp-highlight-color: #362d7a;
@@ -18,67 +16,47 @@
 }
 
 /* --- header extension --- */
-.hdr-container {
-    position: relative;
-    text-align: left;
-    color: white;
-    padding-bottom: 5%;
-}
-
-.img-container {
-    width: 100%;
-    overflow: hidden;
-}
-
-.hdr-img {
-    width: 150%;
-    margin-top: -6%;
-    margin-bottom: -6%;
-    background-image: url(photos/header-low-res.jpg);
-}
-
-.title {
+.index-title {
     position: absolute;
     text-align: left;
-    top: 0%;
-    left: 3%;
-    font-weight: bold;
-    font-size: 8vw;
-    text-shadow: 
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
-    letter-spacing: 3px;
+    text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.6);
+    font-size: calc(1em + 5vw);
+    margin: auto auto 23vw;
+    padding: 0.5em;
+    color: #fff;
 }
 
 .contact-btn {
     position: absolute;
-    bottom: 15%;
-    left: 3%;
-    font-size: 5vw;
-    font-family: 'Trebuchet MS';
-    padding: 5px 10px;
-    background-color: rgba(170, 170, 170, 0.7);
-    border: 2px solid white;
-    text-shadow: 
+    text-align: left;
+    text-shadow:
         -1px -1px 0 #000,
         1px -1px 0 #000,
         -1px 1px 0 #000,
         1px 1px 0 #000;
-    cursor: pointer;
+    font-size: calc(1em + 1vw);
+
+    margin: 39vw auto auto;
+    margin-left: 1em;
+
+    padding: 0.1em;
+    color: #fff;
+    font-family: 'Trebuchet MS';
+    background-color: rgba(170, 170, 170, 0.7);
+    border: 2px solid white;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .contact-btn:hover {
     background-color: rgba(170, 170, 170, 0.9);
-    border-bottom: 1px solid white;
-    
+    border-bottom: 1px solid white;   
 }
 
 /* --- main sections --- */
+
 .section1 {
-    padding-top: 20px;;
+    padding-top: 50px;
 }
 
 .section-title {
@@ -94,6 +72,7 @@
 }
 
 /* --- incentive list --- */
+
 ul {
     list-style: none;
     font-size: 1.1em;
@@ -117,6 +96,7 @@ ul .i-list::before {
 }
 
 /* --- hr's --- */
+
 .link-separator {
     margin-right: 50%;
 }
@@ -126,6 +106,7 @@ ul .i-list::before {
 }
 
 /* --- contact form --- */
+
 #contactContainer {
     background-color: inherit;
     padding: 10px 6% 75px 6%;
@@ -146,15 +127,20 @@ ul .i-list::before {
 }
 
 /* style inputs w/ type="text", select elements, and textareas */
+
 input[type=text], input[type=email], select, textarea {
     width: 100%;
     padding: 20px;
-    border: 1px solid #ccc; /* gray border */
-    border-radius: 4px; /* rounded borders */
-    box-sizing: border-box; /* make sure padding & width stays in place */
+    border: 1px solid #ccc;
+    /* gray border */
+    border-radius: 4px;
+    /* rounded borders */
+    box-sizing: border-box;
+    /* make sure padding & width stays in place */
     margin-top: 6px;
     margin-bottom: 16px;
-    resize: vertical; /* allow user to vertically resize the textarea */
+    resize: vertical;
+    /* allow user to vertically resize the textarea */
 }
 
 form label {
@@ -183,31 +169,22 @@ form label {
     font-weight: normal;
 }
 
-    .submit-btn:hover {
-        background-color: var(--main-comp-highlight-color-alt);
-        color: white;
-    }
+.submit-btn:hover {
+    background-color: var(--main-comp-highlight-color-alt);
+    color: white;
+}
 
 /* adjust body ('main'), etc. for larger screens */
+
 @media screen and (min-width: 750px) {
     /* narrow allowed width of all content (besides header/footer) */
     #main {
         padding: 0% 15%;
     }
-
     /* header extension */
-    .hdr-img {
-        width: 100%;
-    }
-    .title {
-        font-size: 7vw;
-    }
     .contact-btn {
-        font-size: 4vw;
-        left: 3%;
-        bottom: 20%;
+        font-size: calc(1em + 2vw);
     }
-
     /* text sections */
     .section-title {
         margin: 0% 5%;
@@ -221,15 +198,12 @@ form label {
         font-size: 1.2em;
         margin: 20px 6%;
     }
-
     /* contact form */
     #contactContainer {
         padding: 10px 12% 75px 12%;
     }
-
 }
 
 /* adjust body ('main'), etc. for huge screens */
-@media screen and (min-width: 1500px) {
 
-}
+@media screen and (min-width: 1500px) {}
