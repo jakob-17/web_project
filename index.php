@@ -13,6 +13,24 @@
 
 </head>
 
+<div style="display: none">
+    <?php
+    if (!empty($_POST["send"])) {
+        $name = $_POST["userName"];
+        $email = $_POST["userEmail"];
+        $subject = $_POST["userSubject"];
+        $message = $_POST["userMessage"];
+
+        $toEmail = "jakob_horvath@hotmail.com";
+        $headers = "From: " . $name . "<" . $email . ">\r\n";
+        if (mail($toEmail, $subject, $message, $headers)) {
+            $replyMessage = "Thank you. We will get back to you within 24 hours.";
+            $type = "success";
+        }
+    }
+    ?>
+</div>
+
 <!-- inline style for de-blur header effect (js searches this document) -->
 <style>
     header {
@@ -57,22 +75,6 @@
         }
     }
 </style>
-
-<?php
-if (!empty($_POST["send"])) {
-    $name = $_POST["userName"];
-    $email = $_POST["userEmail"];
-    $subject = $_POST["userSubject"];
-    $message = $_POST["userMessage"];
-
-    $toEmail = "jakob_horvath@hotmail.com";
-    $headers = "From: " . $name . "<" . $email . ">\r\n";
-    if (mail($toEmail, $subject, $message, $headers)) {
-        $replyMessage = "Thank you. We will get back to you within 24 hours.";
-        $type = "success";
-    }
-}
-?>
 
 <body>
     <!-- collapsed header -->
@@ -202,7 +204,7 @@ if (!empty($_POST["send"])) {
                         <div id="statusMessage">
                             <?php
                             if (!empty($replyMessage)) {
-                                ?>
+                            ?>
                                 <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>
                             <?php
                             }
