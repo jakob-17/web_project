@@ -13,8 +13,8 @@
 
 </head>
 
+<!-- inline style for de-blur header effect (js searches this document) -->
 <style>
-    /* inline style for unblurring header effect (js searches this document) */
     header {
         display: block;
     }
@@ -57,6 +57,22 @@
         }
     }
 </style>
+
+<?php
+if (!empty($_POST["send"])) {
+    $name = $_POST["userName"];
+    $email = $_POST["userEmail"];
+    $subject = $_POST["userSubject"];
+    $message = $_POST["userMessage"];
+
+    $toEmail = "jakob_horvath@hotmail.com";
+    $headers = "From: " . $name . "<" . $email . ">\r\n";
+    if (mail($toEmail, $subject, $message, $headers)) {
+        $replyMessage = "Thank you. We will get back to you within 24 hours.";
+        $type = "success";
+    }
+}
+?>
 
 <body>
     <!-- collapsed header -->
@@ -158,29 +174,42 @@
         <hr class="body-separator">
 
         <!-- contact form -->
-        <div id="contactContainer" data-aos="zoom-in" data-aos-duration="1500">
+        <div id="contactContainer">
             <div class="contact-bg">
-                <!-- <form action="contact.php" method="post" data-netlify="true"> -->
-                <form name="contact" method="POST" data-netlify="true">
+                <!-- <form name="contact" method="POST" action="" onsubmit="return validateContactForm()"> -->
+                <form name="contact" method="POST" action="">
 
                     <div class="contact-title">
                         Contact Us
                     </div>
 
                     <label for="name">Name</label>
-                    <input type="text" id="contactName" name="name" placeholder="Bob Marley">
+                    <input type="text" id="contactName" name="contactName" placeholder="Bob Marley" required>
 
                     <label for="email">Email</label>
-                    <!-- <input type="email" id="_contactEmail" name="_email" placeholder="littlebirds@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" /> -->
-                    <input type="email" id="contactEmail" name="email" placeholder="littlebirds@gmail.com" required
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                    <input type="email" id="_contactEmail" name="_contactEmail" placeholder="littlebirds@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                    <input type="email" id="contactEmail" name="contactEmail" placeholder="littlebirds@gmail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+
+                    <label for="name">Subject</label>
+                    <input type="text" id="contactSubject" name="contactSubject" placeholder="Phone Call" required>
 
                     <label for="message">Message</label>
-                    <textarea id="contactMessage" name="message"
-                        placeholder="Hello! I would like to schedule a phone call with your company."></textarea>
+                    <textarea id="contactMessage" name="contactMessage" placeholder="Hello! I would like to schedule a phone call with your company." required></textarea>
 
-                    <!-- <input class="submit-btn" type="submit" value="Send Message"> -->
-                    <button class="submit-btn" type="submit">Send Message</button>
+                    <div>
+                        <button type="submit" name="send" class="submit-btn">Send Message</button>
+
+                        <div id="statusMessage">
+                            <?php
+                            if (!empty($replyMessage)) {
+                                ?>
+                                <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>
+                            <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+
                 </form>
             </div>
         </div>
@@ -189,7 +218,7 @@
 
     <!-- footer -->
     <div class="footer">
-        <div class="footer-row">
+        <div class="footer-row" data-aos="fade-down" data-aos-duration="2500">
             <div class="footer-info">
                 <p class="footer-text">
                     A concierge service in Sarasota
@@ -253,11 +282,11 @@
         var gSidebar = document.getElementById('collapsedSidebar');
         var gBtn = document.getElementById('navBtn');
 
-        document.addEventListener('click', function (event) {
+        // close sidebar if click was outside it
+        document.addEventListener('click', function(event) {
             var clickInside = gSidebar.contains(event.target);
             var clickInside2 = gBtn.contains(event.target);
             if (!clickInside && !clickInside2) {
-                // click was outside the sidebar
                 closeSidebar();
             }
         });
@@ -269,8 +298,7 @@
             if (sidebar.style.width == "150px") {
                 sidebar.style.width = "0px";
                 btn.style.marginRight = "0px";
-            }
-            else {
+            } else {
                 sidebar.style.width = "150px";
                 btn.style.marginRight = "150px";
             }
@@ -284,14 +312,14 @@
             btn.style.marginRight = "0px";
         }
 
+        // self-explanatory
         function scrollToForm() {
             let form = document.getElementById("contactContainer");
             form.scrollIntoView(true);
         }
 
+        // de-blur header logic
         document.addEventListener('DOMContentLoaded', () => {
-
-            // experiment
             window.onload = function loadStuff() {
                 var win, doc, img, header, enhancedClass;
                 // quit early if older browser
@@ -306,11 +334,11 @@
                 enhancedClass = 'index-header-enhanced';
 
                 // convoluted
-                var bigSrc = (function () {
+                var bigSrc = (function() {
                     // find all the CssRule objects inside the inline stylesheet
                     var styles = doc.querySelector('style').sheet.cssRules;
                     // fetch the background-image declaration..
-                    var bgDecl = (function () {
+                    var bgDecl = (function() {
                         // .. via a self-executing function
                         var bgStyle, i, l = styles.length;
                         for (i = 0; i < l; i++) {
@@ -329,7 +357,7 @@
                 }());
 
                 // assign onload handler to the dummy image *before* assigning the src
-                img.onload = function () {
+                img.onload = function() {
                     header.className += ' ' + enhancedClass;
                 };
 
@@ -339,7 +367,6 @@
                 }
             };
         })
-
     </script>
 </body>
 
